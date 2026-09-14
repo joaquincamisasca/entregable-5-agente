@@ -1,0 +1,18 @@
+# Core
+python-dotenv==1.0.1
+pydantic>=2.7.4,<3.0.0
+
+# LangGraph (grafo del agente, persistencia)
+langgraph>=0.2.45,<0.3.0
+langgraph-checkpoint-sqlite>=2.0.0,<3.0.0
+# IMPORTANTE: fijado a esta versión exacta. aiosqlite>=0.21 eliminó el
+# método Connection.is_alive() que langgraph-checkpoint-sqlite 2.x
+# todavía usa internamente -- una versión más nueva rompe la persistencia
+# con un AttributeError.
+aiosqlite==0.20.0
+
+# LangChain (LLM, herramientas)
+langchain-core>=0.3.17,<0.4.0
+langchain-openai>=0.2.6,<0.3.0
+langchain-anthropic>=0.2.4,<0.3.0
+langchain-ollama>=0.2.0,<0.3.0

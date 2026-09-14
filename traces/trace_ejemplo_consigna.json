@@ -1,0 +1,27 @@
+[
+  {
+    "tipo": "HumanMessage",
+    "contenido": "¿Cuántos pedidos tuvo el cliente 102 y cuál fue el total?"
+  },
+  {
+    "tipo": "AIMessage",
+    "contenido": "",
+    "tool_calls": [
+      {
+        "nombre": "buscar_pedidos",
+        "argumentos": {
+          "cliente_id": 102
+        }
+      }
+    ]
+  },
+  {
+    "tipo": "ToolMessage",
+    "contenido": "{\"cliente_id\": 102, \"pedidos\": 3, \"total\": 14500.0, \"detalle\": [{\"id\": 1, \"monto\": 5000.0}, {\"id\": 2, \"monto\": 5500.0}, {\"id\": 3, \"monto\": 4000.0}]}",
+    "herramienta": "buscar_pedidos"
+  },
+  {
+    "tipo": "AIMessage",
+    "contenido": "El cliente 102 tuvo 3 pedidos por un total de $14.500."
+  }
+]

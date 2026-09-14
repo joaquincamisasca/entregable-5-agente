@@ -1,0 +1,27 @@
+# Variables de entorno
+.env
+.env.local
+
+# Base de datos de persistencia (se regenera al correr el agente)
+checkpoints.sqlite
+checkpoints.sqlite-*
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
